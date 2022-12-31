@@ -1,0 +1,29 @@
+{
+  "name": "node-third-party-api-services",
+  "version": "1.0.0",
+  "description": "Service Classes that make API calls to Third Party Applications or Services",
+  "main": "app.js",
+  "scripts": {
+    "start": "echo \"node [your_file] [function_name] --key1 value1 --key2 value2\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daniccan/node-third-party-api-services.git"
+  },
+  "keywords": [],
+  "author": "daniccan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/daniccan/node-third-party-api-services/issues"
+  },
+  "homepage": "https://github.com/daniccan/node-third-party-api-services#readme",
+  "dependencies": {
+    "async": "^3.2.0",
+    "axios": "^0.26.0",
+    "btoa": "1.2.1",
+    "dotenv": "^14.1.0",
+    "make-runnable": "^1.4.1",
+    "winston": "^3.8.2",
+    "winston-daily-rotate-file": "^4.7.1"
+  }
+}
