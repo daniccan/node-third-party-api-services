@@ -8,15 +8,15 @@ let FreshworksCommon = {
       {
         times: 3,
         interval: 60000,
-        // errorFilter: function (err) {
-        //   if (err.response) {
-        //     logger.info(`Retrying after: ${err.response.headers["retry-after"]} seconds`);
-        //     this.intervalFunc = () => {
-        //       return (+err.response.headers["retry-after"] + 1) * 1000;
-        //     };
-        //     return err.response.status === 429;
-        //   }
-        // },
+        errorFilter: function (err) {
+          if (err.response) {
+            logger.info(`Retrying after: ${err.response.headers["retry-after"]} seconds`);
+            this.intervalFunc = () => {
+              return (+err.response.headers["retry-after"] + 1) * 1000;
+            };
+            return err.response.status === 429;
+          }
+        },
       },
       (callback) => {
         return apiMethod(callback, ...args);
